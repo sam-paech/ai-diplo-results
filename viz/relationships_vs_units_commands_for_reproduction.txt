@@ -1,0 +1,28 @@
+# Commands to reproduce results in relationships_vs_units.ipynb
+Run these commands with the AI Diplomacy harness: https://github.com/GoodStartLabs/AI_Diplomacy
+
+
+## sam-exp080-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: moonshotai/kimi-k2
+OTHER: mistralai/devstral-small
+
+BENCHMARK MODE (baseline)
+-> 20 iterations, max year 1925
+simple prompts
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp080-bench"     --iterations 20    --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:moonshotai/kimi-k2, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp113-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: o3
+OTHER: mistralai/devstral-small
+
+BENCHMARK MODE
+-> 20 iterations, max year 1915
+simple prompts
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp113-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 32000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openai-requests:o3@https://api.openai.com/v1#apikey, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "ai_diplomacy/prompts_benchmark"

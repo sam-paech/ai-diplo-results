@@ -1,0 +1,129 @@
+# Commands to reproduce results in benchmark_results.ipynb
+Run these commands with the AI Diplomacy harness: https://github.com/GoodStartLabs/AI_Diplomacy
+
+## sam-exp080-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: moonshotai/kimi-k2
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp080-bench"     --iterations 20    --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:moonshotai/kimi-k2, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp081-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: mistralai/mistral-small-3.2-24b-instruct
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp081-bench"     --iterations 20    --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp082-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: mistralai/devstral-small
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp082-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp083-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: google/gemini-2.5-flash
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp083-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:google/gemini-2.5-flash, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+# sam-exp089-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: command-a-03-2025
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp089-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openai:command-a-03-2025@https://api.cohere.ai/compatibility/v1#apikey, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+# sam-exp090-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: qwen/qwen3-235b-a22b
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp090-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openai-requests:qwen/qwen3-235b-a22b, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+# sam-exp091-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: llama-4-maverick
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp091-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:meta-llama/llama-4-maverick, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+# sam-exp092-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: openai/gpt-4.1-nano
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp092-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:openai/gpt-4.1-nano, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+# sam-exp106-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: meta-llama/llama-3.3-70b-instruct
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp106-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 16000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:meta-llama/llama-3.3-70b-instruct, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+# sam-exp108-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+commit id 7c59153ab4d066ba163821990eb2b9e70320d755
+FRANCE: qwen/qwen3-235b-a22b-07-25
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp108-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:qwen/qwen3-235b-a22b-07-25, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+
+## sam-exp112-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: o4-mini
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp112-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 32000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openai-requests:o4-mini@https://api.openai.com/v1#apikey, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp113-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: o3
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/data/sam-exp113-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 3   --max_tokens 32000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openai-requests:o3@https://api.openai.com/v1#apikey, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "ai_diplomacy/prompts_benchmark"
+
+
+## sam-exp114-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: o3
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp114-bench"     --iterations 20   --parallel 20   --max_year 1925     --num_negotiation_rounds 0   --max_tokens 32000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openai-requests:o3@https://api.openai.com/v1#apikey, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "ai_diplomacy/prompts_benchmark"
+
+
+#$ sam-exp115-bench
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+FRANCE: moonshotai/kimi-k2
+OTHER: mistralai/devstral-small
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp115-bench"     --iterations 20    --parallel 20   --max_year 1925     --num_negotiation_rounds 0   --max_tokens 4000   --models "openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:moonshotai/kimi-k2, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small, openrouter:mistralai/devstral-small" --prompts_dir "ai_diplomacy/prompts_benchmark"

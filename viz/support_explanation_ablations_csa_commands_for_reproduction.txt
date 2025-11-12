@@ -1,0 +1,87 @@
+# Commands to reproduce results in support_explanation_ablations_csa.ipynb
+Run these commands with the AI Diplomacy harness: https://github.com/GoodStartLabs/AI_Diplomacy
+
+
+## sam-exp087-csa8
+
+AUSTRIA, ENGLAND, FRANCE, GERMANY, ITALY, RUSSIA, TURKEY
+
+CSA for prompt ablations:
+- order history *not* included for order generation prompt
+- support instructions v2 nshot 12
+- add condensed possible orders
+
+base: sam-exp072-r/runs/run00001
+
+F1907M
+GERMANY
+8 units
+Baseline orders: just moves & holds, lots of bounces
+
+! temp 0.3
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp087-csa8"     --critical_state_base_run "results/sam-exp072/runs/run_00001"  --iterations 120     --parallel 30  --resume_from_phase F1907M   --end_at_phase W1907M     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct" \
+--prompts_dir "experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-support-instructions-v2-nshot12, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024"
+
+
+# sam-exp094-csa
+
+CSA for prompt ablations:
+- order history *is* included for order generation prompt
+- baseline prompts
+
+base: sam-exp072-r/runs/run00001
+
+F1907M
+GERMANY
+8 units
+Baseline orders: just moves & holds, lots of bounces
+
+! temp 0.3
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp094-csa"     --critical_state_base_run "results/sam-exp072/runs/run_00001"  --iterations 120     --parallel 30  --resume_from_phase F1907M   --end_at_phase W1907M     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp094-csa4
+
+AUSTRIA, ENGLAND, FRANCE, GERMANY, ITALY, RUSSIA, TURKEY
+
+CSA for prompt ablations:
+- order history *is* included for order generation prompt
+- add condensed possible orders
+
+base: sam-exp072-r/runs/run00001
+
+F1907M
+GERMANY
+8 units
+Baseline orders: just moves & holds, lots of bounces
+
+! temp 0.3
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp094-csa4"     --critical_state_base_run "results/sam-exp072/runs/run_00001"  --iterations 120     --parallel 30  --resume_from_phase F1907M   --end_at_phase W1907M     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct" \
+--prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp094-csa8
+
+AUSTRIA, ENGLAND, FRANCE, GERMANY, ITALY, RUSSIA, TURKEY
+
+CSA for prompt ablations:
+- order history *is* included for order generation prompt
+- support instructions v2 nshot 12
+- add condensed possible orders
+
+base: sam-exp072-r/runs/run00001
+
+F1907M
+GERMANY
+8 units
+Baseline orders: just moves & holds, lots of bounces
+
+! temp 0.3
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp094-csa8"     --critical_state_base_run "results/sam-exp072/runs/run_00001"  --iterations 120     --parallel 30  --resume_from_phase F1907M   --end_at_phase W1907M     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct, openrouter-mistralai/mistral-small-3.2-24b-instruct" \
+--prompts_dir "experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-support-instructions-v2-nshot12, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024, experiments/prompts_simple_sam-exp024"
+
+

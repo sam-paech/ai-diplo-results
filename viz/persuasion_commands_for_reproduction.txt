@@ -1,0 +1,453 @@
+# Commands to reproduce results in persuasion.ipynb
+Run these commands with the AI Diplomacy harness: https://github.com/GoodStartLabs/AI_Diplomacy
+
+
+########################
+gemini-2.5-pro Persuader
+########################
+
+## sam-exp058-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is google/gemini-2.5-pro
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: reason
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "results/sam-exp058-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:google/gemini-2.5-pro" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-reason"
+
+
+## sam-exp059-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is google/gemini-2.5-pro
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: sincere apology
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "results/sam-exp059-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:google/gemini-2.5-pro" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-apology"
+
+
+## sam-exp060-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is google/gemini-2.5-pro
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: lying
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "results/sam-exp060-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:google/gemini-2.5-pro" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-lying"
+
+
+## sam-exp061-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is google/gemini-2.5-pro
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: appeal to empathy
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "results/sam-exp061-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:google/gemini-2.5-pro" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-appeal-empathy"
+
+
+## sam-exp062-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is google/gemini-2.5-pro
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: appeal to fairness
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "results/sam-exp062-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:google/gemini-2.5-pro" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-appeal-fairness"
+
+
+## sam-exp063-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is google/gemini-2.5-pro
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: jailbreak v1
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "results/sam-exp063-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:google/gemini-2.5-pro" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-jailbreak-v1"
+
+
+
+
+########################
+gpt-4.1-mini Persuader
+########################
+
+## sam-exp109-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is openai/gpt-4.1-mini
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: reason
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp109-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:openai/gpt-4.1-mini" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-reason"
+
+
+## sam-exp109-csa2
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is openai/gpt-4.1-mini
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: sincere apology
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp109-csa2"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:openai/gpt-4.1-mini" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-apology"
+
+
+## sam-exp109-csa3
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is openai/gpt-4.1-mini
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: lying
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp109-csa3"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:openai/gpt-4.1-mini" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-lying"
+
+
+## sam-exp109-csa4
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is openai/gpt-4.1-mini
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: appeal to empathy
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp109-csa4"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:openai/gpt-4.1-mini" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-appeal-empathy"
+
+
+## sam-exp109-csa5
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is openai/gpt-4.1-mini
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: appeal to fairness
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp109-csa5"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:openai/gpt-4.1-mini" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-appeal-fairness"
+
+
+## sam-exp109-csa6
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is openai/gpt-4.1-mini
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: jailbreak v1
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp109-csa6"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:openai/gpt-4.1-mini" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-jailbreak-v1"
+
+
+
+
+##########################
+DeepSeek-R1-0528 Persuader
+##########################
+
+
+## sam-exp110-csa
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is DeepSeek-R1-0528
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: reason
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp110-csa"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, deepseek:deepseek-reasoner" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-reason"
+
+
+## sam-exp110-csa2
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is DeepSeek-R1-0528
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: sincere apology
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp110-csa2"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, deepseek:deepseek-reasoner" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-apology"
+
+
+## sam-exp110-csa3
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is DeepSeek-R1-0528
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: lying
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp110-csa3"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, deepseek:deepseek-reasoner" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-lying"
+
+
+## sam-exp110-csa4
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is DeepSeek-R1-0528
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: appeal to empathy
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp110-csa4"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, deepseek:deepseek-reasoner" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-appeal-empathy"
+
+
+
+
+## sam-exp110-csa5
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is DeepSeek-R1-0528
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: appeal to fairness
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp110-csa5"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, deepseek:deepseek-reasoner" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-appeal-fairness"
+
+
+## sam-exp110-csa6
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+persuader is DeepSeek-R1-0528
+persuadees are mistral-small-3.2-24b-instruct
+persuasion method: jailbreak v1
+
+- !! temperature = 0.5
+- negotiation rounds 6
+
+expecting effect on:
+- allegiance switches towards Austria
+
+- base run for csa is sam-exp055
+Power: Turkey
+Phase: S1920M
+holds 5 scs
+relationships: all enemies
+
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp110-csa6"   --critical_state_base_run "results/sam-exp055/runs/run_00000"  --iterations 20     --parallel 20  --resume_from_phase S1920M   --end_at_phase F1920M     --num_negotiation_rounds 6   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, deepseek:deepseek-reasoner" \
+--prompts_dir "ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, ai_diplomacy/prompts_simple, experiments/sam-exp055-csa-prompts/prompts_simple_csa-jailbreak-v1"

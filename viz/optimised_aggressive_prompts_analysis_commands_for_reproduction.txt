@@ -1,0 +1,30 @@
+# Commands to reproduce results in optimised_aggressive_prompts_analysis.ipynb
+Run these commands with the AI Diplomacy harness: https://github.com/GoodStartLabs/AI_Diplomacy
+
+
+## sam-exp103
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+
+baseline prompts
+france: devstral small
+other: mistral small 3.2
+
+# looking at completion rate / win rate / game score for devstral small with baseline prompts
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp103"     --iterations 10   --parallel 10   --max_year 1950     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/devstral-small, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct" --prompts_dir "experiments/prompts_simple_sam-exp024"
+
+
+## sam-exp104
+
+AUSTRIA, ENGLAND, FRANCE, GERMANY, ITALY, RUSSIA, TURKEY
+
+https://github.com/EveryInc/AI_Diplomacy/tree/streamline-prompts
+
+baseline prompts
+france: devstral small
+other: mistral small 3.2
+
+# looking at completion rate / win rate / game score for devstral small with alex's level 3 optimised aggression prompts
+
+python3 experiment_runner.py     --experiment_dir "/mnt/i/diplo/sam-exp104"     --iterations 10   --parallel 10   --max_year 1950     --num_negotiation_rounds 3   --max_tokens 4000   --models "openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/devstral-small, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct, openrouter:mistralai/mistral-small-3.2-24b-instruct" --prompts_dir "experiments/prompts_simple_sam-exp024,experiments/prompts_simple_sam-exp024,ai_diplomacy/prompts/prompts_hold_reduction_v3,experiments/prompts_simple_sam-exp024,experiments/prompts_simple_sam-exp024,experiments/prompts_simple_sam-exp024,experiments/prompts_simple_sam-exp024"
